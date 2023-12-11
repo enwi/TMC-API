@@ -18,6 +18,9 @@
 #include "tmc/helpers/API_Header.h"
 #include "TMC4210_Registers.h"
 
+// user must provide this function
+uint8_t ReadWriteSPI(void* p_SPI_DeviceHandle, uint8_t data,bool endTransaction);
+
 // TMC4210 library functions
 void Init4210(void);
 void ReadWrite4210(uint8_t *Read, uint8_t *Write);

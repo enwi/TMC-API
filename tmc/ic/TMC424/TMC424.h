@@ -18,6 +18,9 @@
 	#include "tmc/helpers/API_Header.h"
 	#include "TMC424_Register.h"
 
+	// user must provide this function
+	uint8_t ReadWriteSPI(void* p_SPI_DeviceHandle, uint8_t data,bool endTransaction);
+
 	void SetEncoderPrescaler(uint8_t Index, uint32_t Prescaler, uint8_t SpecialFunctionBits);
 	int32_t ReadEncoder(uint8_t Which423, uint8_t Index);
 	void WriteEncoder(uint8_t Index, int32_t Value);

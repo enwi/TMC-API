@@ -33,8 +33,8 @@
 	 \param Write  four byte array holding the data to write to the TMC424
 
 	 This is the low-level function that does all SPI communication with
-	 the TMC424. It sends a 32 bit SPI telegramme to the TMC424 and
-	 receives the 32 bit answer telegramme from the TMC424.
+	 the TMC424. It sends a 32 bit SPI telegram to the TMC424 and
+	 receives the 32 bit answer telegram from the TMC424.
 ********************************************************************/
 static void ReadWrite424(uint8_t *Read, uint8_t *Write)
 {
@@ -51,7 +51,7 @@ static void ReadWrite424(uint8_t *Read, uint8_t *Write)
 	 \param Address   TMC424 register address
 	 \param HiByte    MSB to be written
 	 \param MidByte   Middle byte to be written
-	 \param LoByte    LSB to be writteb
+	 \param LoByte    LSB to be written
 
 	 Write to the three single bytes of a TMC424 register.
 ********************************************************************/
@@ -67,7 +67,7 @@ static void Write424Bytes(uint8_t Address, uint8_t HiByte, uint8_t MidByte, uint
 /***************************************************************//**
 	 \fn SetEncoderPrescaler(uint8_t Index, uint32_t Prescaler, uint8_t SpecialFunctionBits)
 	 \brief Index  TMC424 encoder channel (0, 1 or 2)
-	 \param Prescaler   Encooder pre-scaler (see TMC424 data sheet)
+	 \param Prescaler   Encoder pre-scaler (see TMC424 data sheet)
 	 \param SpecialFunctionBits  special encoder functions (see TMC424 data sheet)
 
 	 This function sets the pre-scaler and the special functions of an encoder

@@ -18,6 +18,9 @@
 	#include "tmc/helpers/API_Header.h"
 	#include "TMC457_Register.h"
 
+	// user must provide this function
+	uint8_t ReadWriteSPI(void* p_SPI_DeviceHandle, uint8_t data,bool endTransaction);
+
 	void Write457Zero(uint8_t Address);
 	void Write457Int(uint8_t Address, int32_t Value);
 	void Write457Wavetable(uint16_t RAMAddress, uint16_t Value);

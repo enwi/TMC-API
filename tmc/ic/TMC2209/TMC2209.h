@@ -35,11 +35,11 @@ typedef struct {
 typedef void (*tmc2209_callback)(TMC2209TypeDef*, ConfigState);
 
 // Default Register values
-#define R00 0x00000040  // GCONF
-#define R10 0x00071703  // IHOLD_IRUN
-#define R11 0x00000014  // TPOWERDOWN
-#define R6C 0x10000053  // CHOPCONF
-#define R70 0xC10D0024  // PWMCONF
+const int32_t R00 = 0x00000040;  // GCONF
+const int32_t R10 = 0x00071703;  // IHOLD_IRUN
+const int32_t R11 = 0x00000014;  // TPOWERDOWN
+const int32_t R6C = 0x10000053;  // CHOPCONF
+const int32_t R70 = 0xC10D0024;  // PWMCONF
 
 // Register access permissions:
 //   0x00: none (reserved)
