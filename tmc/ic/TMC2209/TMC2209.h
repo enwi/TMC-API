@@ -35,11 +35,11 @@ typedef struct {
 typedef void (*tmc2209_callback)(TMC2209TypeDef*, ConfigState);
 
 // Default Register values
-const int32_t R00 = 0x00000040;  // GCONF
-const int32_t R10 = 0x00071703;  // IHOLD_IRUN
-const int32_t R11 = 0x00000014;  // TPOWERDOWN
-const int32_t R6C = 0x10000053;  // CHOPCONF
-const int32_t R70 = 0xC10D0024;  // PWMCONF
+const int32_t R00 = 0x00000040;  /// GCONF
+const int32_t R10 = 0x00071703;  /// IHOLD_IRUN
+const int32_t R11 = 0x00000014;  /// TPOWERDOWN
+const int32_t R6C = 0x10000053;  /// CHOPCONF
+const int32_t R70 = 0xC10D0024;  /// PWMCONF
 
 // Register access permissions:
 //   0x00: none (reserved)
@@ -87,6 +87,12 @@ static const int32_t tmc2209_defaultRegisterResetState[TMC2209_REGISTER_COUNT] =
 void tmc2209_writeInt(TMC2209TypeDef *tmc2209, uint8_t address, int32_t value);
 int32_t tmc2209_readInt(TMC2209TypeDef *tmc2209, uint8_t address);
 
+/// @brief Init TMC2209 communication
+/// @param tmc2209 Handle
+/// @param channel UART channel
+/// @param slaveAddress Slave address
+/// @param tmc2209_config Configuration
+/// @param registerResetState Register reset state
 void tmc2209_init(TMC2209TypeDef *tmc2209, uint8_t channel, uint8_t slaveAddress, ConfigurationTypeDef *tmc2209_config, const int32_t *registerResetState);
 uint8_t tmc2209_reset(TMC2209TypeDef *tmc2209);
 uint8_t tmc2209_restore(TMC2209TypeDef *tmc2209);
